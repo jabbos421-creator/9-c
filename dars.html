@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>9-C Dars jadvali</title>
+</head>
+<body>
+    <H1>Dushanba</H1>
+    <ol>
+        <li>
+            Sport
+        </li>
+         <li>
+            Kitobxonlik
+        </li>
+         <li>
+            Matematika
+        </li>
+         <li>
+            Matematika
+        </li>
+         <li>
+            Kimyo
+        </li>
+         <li>
+            Ingliz tili
+        </li>
+         <li>
+            Ingliz tili
+        </li>
+         <li>
+            Blok
+        </li>
+    </ol>
+    <H1>Seshanba</H1>
+    <ol>
+        <li>
+            Ingliz tili
+        </li>
+         <li>
+            Ingliz tili 
+        </li>
+         <li>
+            Rus tili 
+        </li>
+         <li>
+            Tarbiya
+        </li>
+         <li>
+            Blok
+        </li>
+         <li>
+            Informatika
+        </li>
+         <li>
+            Matematika
+        </li>
+         <li>
+            Matematika
+        </li>
+    </ol>
+    <H1>Chorshanba</H1>
+    <ol>
+        <li>
+            Biologiya
+        </li>
+         <li>
+            Ingliz tili 
+        </li>
+         <li>
+            Ingliz tili
+        </li>
+         <li>
+            Blok
+        </li>
+         <li>
+            Matematika 
+        </li>
+         <li>
+            Matematika
+        </li>
+         <li>
+            Sport
+        </li>
+         <li>
+            Ona tili
+        </li>
+    </ol>
+    <H1>Payshanba</H1>
+    <ol>
+        <li>
+            Tarix
+        </li>
+         <li>
+            Ingliz tili 
+        </li>
+         <li>
+            Ingliz tili 
+        </li>
+         <li>
+            Blok
+        </li>
+         <li>
+            Matematika
+        </li>
+         <li>
+            Matematika
+        </li>
+         <li>
+            Fizika
+        </li>
+         <li>
+            Kitobxonlik
+        </li>
+    </ol>
+    <H1>Juma</H1>
+    <ol>
+        <li>
+            Ingliz tili
+        </li>
+         <li>
+            Ingliz tili
+        </li>
+         <li>
+            Matematika
+        </li>
+         <li>
+            Matematika
+        </li>
+         <li>
+            Blok
+        </li>
+         <li>
+            Tarix
+        </li>
+         <li>
+            Fizika
+        </li>
+         <li>
+            Ona tili
+        </li>
+    </ol>
+    <style>
+        
+        li {
+    cursor: pointer;
+}
+
+.teacher {
+    display: none;
+    color: #9affad;
+    font-size: 15px;
+    margin-top: 8px;
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+}
+
+li.active .teacher {
+    display: block;
+}
+
+   
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    min-height: 100vh;
+    padding: 25px;
+
+    background-color: #003b19;
+    background-image:
+        linear-gradient(
+            rgba(0, 45, 20, 0.45),
+            rgba(0, 35, 15, 0.55)
+        ),
+        url("./image.png");
+
+    background-size: cover, 180px auto;
+    background-position: center, center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+/* Kun sarlavhalari */
+h1 {
+    color: white;
+    font-size: 26px;
+    padding: 14px 18px;
+    margin: 25px 0 12px;
+
+    background: linear-gradient(
+        90deg,
+        #00bd50,
+        #006b2b
+    );
+
+    border-left: 6px solid #53ff91;
+    border-radius: 10px;
+    box-shadow: 0 0 12px rgba(0, 255, 100, 0.15);
+}
+
+h1:first-child {
+    margin-top: 0;
+}
+
+/* Shaffof darslar ro'yxati */
+ol {
+    list-style-position: inside;
+    padding: 10px 18px;
+    margin-bottom: 25px;
+
+    background: rgba(0, 65, 30, 0.48);
+    backdrop-filter: blur(3px);
+
+    border: 1px solid rgba(0, 255, 120, 0.65);
+    border-radius: 12px;
+}
+
+li {
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+
+    padding: 12px 8px;
+    border-bottom: 1px solid rgba(0, 255, 120, 0.3);
+
+    transition: 0.25s;
+}
+
+li::marker {
+    color: #fdfffe00;
+    font-weight: bold;
+}
+
+li:last-child {
+    border-bottom: none;
+}
+
+li:hover {
+    background: rgba(0, 255, 100, 0.12);
+    padding-left: 16px;
+    border-radius: 6px;
+}
+
+/* Telefon uchun */
+@media (max-width: 600px) {
+    body {
+        padding: 12px;
+        background-size: cover, 130px auto;
+    }
+
+    h1 {
+        font-size: 22px;
+        padding: 12px;
+    }
+
+    li {
+        font-size: 16px;
+        padding: 10px 6px;
+    }
+}
+
+</style>
+<script>
+document.querySelectorAll("ol li").forEach(li => {
+    const teacher = document.createElement("div");
+
+    teacher.className = "teacher";
+    teacher.textContent = "Ustoz";
+
+    li.appendChild(teacher);
+
+    li.addEventListener("click", () => {
+        li.classList.toggle("active");
+    });
+});
+
+
+const ustozlar = {
+    "Sport": "Sherali Ustoz",
+    "Kitobxonlik": "Umid Ustoz",
+    "Matematika": "Eldor Ustoz",
+    "Kimyo": "Dilrabo Ustoz",
+    "Ingliz tili": "Behruzbek Uztoz",
+    "Blok": "Behruzbek Ustoz",
+    "Rus tili": "Hayotxon Ustoz",
+    "Tarbiya": "Otabek Ustoz",
+    "Informatika": "Jamshid Ustoz",
+    "Biologiya": "Nilufar Ustoz",
+    "Ona tili": "Malika Ustoz",
+    "Tarix": "Asqarali Ustoz",
+    "Fizika": "Jamshid Ustoz"
+};
+
+document.querySelectorAll("ol li").forEach(li => {
+    const fan = li.textContent.trim();
+
+    const joy = document.createElement("div");
+    joy.className = "teacher";
+    joy.textContent = "Ustoz: " + (ustozlar[fan] || "Ustoz belgilanmagan");
+
+    li.appendChild(joy);
+
+    li.addEventListener("click", (c) => {
+        li.classList.toggle("active");
+    });
+});
+</script>
+</body>
+</html>
